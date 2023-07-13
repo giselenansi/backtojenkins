@@ -7,13 +7,13 @@ pipeline {
                 script {
                     sh '''
                         # Create a group
-                        sudo groupadd mygroup
+                        groupadd mygroup
                         
                         # Create a user
-                        sudo useradd -m myuser
+                        useradd -m myuser
                         
                         # Add the user to the group
-                        sudo usermod -a -G mygroup myuser
+                        usermod -a -G mygroup myuser
                     '''
                 }
             }
